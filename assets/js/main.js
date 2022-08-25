@@ -1,4 +1,6 @@
 
+
+
 const labels = [
     'January',
     'February',
@@ -23,6 +25,6 @@ const labels = [
     data: data,
     options: {}
   };
-
-  const myChart = new Chart(document.getElementById('myChart'),config);
+/* 
+  const myChart = new Chart(document.getElementById('myChart'),config); */
 
