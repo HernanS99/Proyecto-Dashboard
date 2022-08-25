@@ -1,4 +1,3 @@
-asdasd
 
 const labels = [
     'January',
