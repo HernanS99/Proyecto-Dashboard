@@ -131,7 +131,7 @@ a {
   }
   
   .active {
-    color: white;
+    color: rgb(15, 4, 4);
     text-decoration: none;
     opacity: 1;
   }
@@ -145,7 +145,7 @@ a {
     margin: 100px auto;
     max-width: 720px;
     padding: 0px;
-    color: white;  
+    color: rgb(235, 228, 228);  
   }
   
   #current-weather{
@@ -195,3 +195,4 @@ a {
   .modal-body p{
     color: #333;
   }
+  
