@@ -83,7 +83,7 @@ footer{
     margin-top: 5%;
 }
 .card {
-    background-color: rgb(40, 148, 167);
+    background-color: rgb(161, 221, 231);
     background-size: cover;
     width: 400px;
     height: 300px;
@@ -110,11 +110,6 @@ footer{
 }
 .container-fluid1{
     width: 230px;
-
-    
-    
-    
-    
     
     
 }
@@ -139,7 +134,7 @@ a {
 
   
   #wrapper {
-    background-color: #28688C;
+    background-color: #378bbc;
     box-shadow: 1px 5px 25px 3px #444;
     border-radius: 10px;
     margin: 100px auto;
@@ -196,3 +191,27 @@ a {
     color: #333;
   }
   
+
+
+  .main {
+    margin-top: 50px;
+}
+.weather-panel {
+    background-image: url("https://frontendfreecode.com/img/whether.jpg");
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 25px 25px 40px 0px rgba(0, 0, 0, 0.33);
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+.weather-panel small {
+    color: inherit;
+    font-size: 50%;
+}
+.weather-panel ul.forecast > li {
+    border-top: 1px solid #fff;
+}
+.weather-panel .temperature > span {
+    font-size: 2em;
+}
