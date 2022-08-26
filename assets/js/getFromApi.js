@@ -5,7 +5,7 @@ let myChart;
 async function leerDatos(){
     let text = document.getElementById("textoBuscar").value;
 
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${text}&units=metric&appid=78cdde4230a71d871746cb112305633d`
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${text}&units=metric&appid=f2a8d961bd047d95b5b3fb44e5f037ce`
     let config = {
 
     }
