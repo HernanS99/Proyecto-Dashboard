@@ -1,46 +1,51 @@
 document.querySelector("#buscar").addEventListener("click",leerDatos)
 let response = []
 let myChart;
+let array = []
+let labelss = []
+let array2 = []
 
 async function leerDatos(){
     let text = document.getElementById("textoBuscar").value;
 
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${text}&units=metric&appid=f2a8d961bd047d95b5b3fb44e5f037ce`
+    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${text}&units=metric&lang=es&appid=78cdde4230a71d871746cb112305633d`
     let config = {
 
     }
     response = await axios.get (url,config)
     response = response.data
+   response = [...response.list]
     
-    console.log(response)
    generarGrafico()
 }
 
 function generarGrafico(){
 
-    
+  array = response.map(Element => Element.main.temp_max)
+  array2 = response.map(Element => Element.main.temp_min)
+  labelss = response.map(Element => Element.dt_txt)
+ 
+    console.log(array)
     if(myChart)
     {
         myChart.destroy;
     }
 
-    const labels = [
-        'Temperatura Maxima',
-        'Temperatura Minima'
-      ];
+    const labels = [...labelss];
 
       const data = {
         labels: labels,
         datasets: [{
-          label: 'My First dataset',
+          label: 'Temperatura Maxima',
           backgroundColor: 'rgb(255, 99, 132)',
           borderColor: 'rgb(255, 99, 132)',
-          data: [response.main.temp_min,response.main.temp_max]
+          
+          data: [...array,...array2]
         }]
       };
     
       const config = {
-        type: 'bar',
+        type: 'line',
         data: data,
         options: {}
       };
