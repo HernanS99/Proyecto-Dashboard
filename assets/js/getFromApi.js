@@ -8,7 +8,8 @@ let array2 = []
 async function leerDatos(){
     let text = document.getElementById("textoBuscar").value;
 
-    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${text}&units=metric&lang=es&appid=78cdde4230a71d871746cb112305633d`
+    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${text}&units=metric&lang=es&appid=8ea115a8875190c8af50ed4a8da786b9`
+    
     let config = {
 
     }
@@ -35,19 +36,54 @@ function generarGrafico(){
 
       const data = {
         labels: labels,
-        datasets: [{
+        datasets: [
+          {
           label: 'Temperatura Maxima',
+          data: [...array,...array2],
           backgroundColor: 'rgb(255, 99, 132)',
           borderColor: 'rgb(255, 99, 132)',
-          
-          data: [...array,...array2]
-        }]
+          borderCapStyle: 'butt',
+          borderDash: [5, 5],
+          animations: {
+            tension: {
+              duration: 1000,
+              easing: 'linear',
+              from: 1,
+              to: 0,
+              loop: true
+            }
+          },
+        },
+        {
+          label: 'Temperatura Minima',
+          data: [...array,...array2],
+          backgroundColor: 'rgb(30,144,255)',
+          borderColor: 'rgb(30,144,255)',
+        }
+      ]
       };
-    
+      
       const config = {
         type: 'line',
         data: data,
-        options: {}
+        options: {
+            scales: {
+              y: {
+                  beginAtZero: true,
+                  ticks: {                    
+                      callback: function(value) {
+                          return value + '°'
+                      }
+                  }
+              },
+              x:{
+                  ticks: {
+                    maxRotation: 90,
+                    minRotation: 90
+                }
+              },
+          }
+        }
       };
     
       myChart = new Chart(document.getElementById('myChart'),config);
@@ -55,5 +91,21 @@ function generarGrafico(){
 }
 
 
-
-
+const labels = Utils.months({count: 7});
+const data = {
+  labels: labels,
+  datasets: [
+    {
+      label: 'Dataset 1',
+      data: [10, 30, 50, 20, 25, 44, -10],
+      borderColor: Utils.CHART_COLORS.red,
+      backgroundColor: Utils.CHART_COLORS.red,
+    },
+    {
+      label: 'Dataset 2',
+      data: [100, 33, 22, 19, 11, 49, 30],
+      borderColor: Utils.CHART_COLORS.blue,
+      backgroundColor: Utils.CHART_COLORS.blue,
+    }
+  ]
+};
