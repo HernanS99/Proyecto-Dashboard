@@ -1,5 +1,6 @@
 document.querySelector("#buscar").addEventListener("click", leerDatos)
 let response = []
+let response1 = []
 let myChart;
 let array = []
 let labelss = []
@@ -7,15 +8,16 @@ let array2 = []
 
 async function leerDatos() {
   let text = document.getElementById("textoBuscar").value;
-
-  const url = `https://api.openweathermap.org/data/2.5/forecast?q=${text}&units=metric&lang=es&appid=8ea115a8875190c8af50ed4a8da786b9`
+  let num = document.getElementById("cantidad").value;
+  let tipo = document.getElementById("tipo").value;
+  const url = `https://api.openweathermap.org/data/2.5/forecast?q=${text}&cnt=${num}&units=${tipo}&lang=es&appid=8ea115a8875190c8af50ed4a8da786b9`
 
   let config = {
 
   }
   response = await axios.get(url, config)
   response = response.data
-  response = [...response.list]
+  response1 = [...response.list]
   
   generarGrafico()
   
@@ -23,18 +25,24 @@ async function leerDatos() {
 
 function generarGrafico() {
 
-  array = response.map(Element => Element.main.temp_max)
-  array2 = response.map(Element => Element.main.temp_min)
+  array = response1.map(Element => Element.main.temp_max)
+  array2 = response1.map(Element => Element.main.temp_min)
 
+  let id = response.city.id;
 
-
-  labelss = response.map(Element => Element.dt_txt)
-  console.log(array)
-  console.log(array2)
+  console.log(id)
+    labelss = response1.map(Element => Element.dt_txt)
+ 
 
   
 
   const labels = [...labelss];
+
+
+  window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = []; window.myWidgetParam.push({ id: 11, cityid: id, appid: '8ea115a8875190c8af50ed4a8da786b9', units: 'metric', containerid: 'openweathermap-widget-11', }); (function () { var script = document.createElement('script'); script.async = true; script.charset = "utf-8"; script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js"; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s); })();
+
+
+
 
   const data = {
     labels: labels,
