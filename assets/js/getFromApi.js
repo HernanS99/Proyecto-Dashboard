@@ -24,9 +24,13 @@ function generarGrafico(){
 
   array = response.map(Element => Element.main.temp_max)
   array2 = response.map(Element => Element.main.temp_min)
+
+
+  
   labelss = response.map(Element => Element.dt_txt)
- 
-    console.log(array)
+  console.log(array)
+  console.log(array2)
+
     if(myChart)
     {
         myChart.destroy;
@@ -39,7 +43,7 @@ function generarGrafico(){
         datasets: [
           {
           label: 'Temperatura Maxima',
-          data: [...array,...array2],
+          data: [...array],
           backgroundColor: 'rgb(255, 99, 132)',
           borderColor: 'rgb(255, 99, 132)',
           borderCapStyle: 'butt',
@@ -56,7 +60,7 @@ function generarGrafico(){
         },
         {
           label: 'Temperatura Minima',
-          data: [...array,...array2],
+          data: [...array2],
           backgroundColor: 'rgb(30,144,255)',
           borderColor: 'rgb(30,144,255)',
         }
@@ -91,21 +95,3 @@ function generarGrafico(){
 }
 
 
-const labels = Utils.months({count: 7});
-const data = {
-  labels: labels,
-  datasets: [
-    {
-      label: 'Dataset 1',
-      data: [10, 30, 50, 20, 25, 44, -10],
-      borderColor: Utils.CHART_COLORS.red,
-      backgroundColor: Utils.CHART_COLORS.red,
-    },
-    {
-      label: 'Dataset 2',
-      data: [100, 33, 22, 19, 11, 49, 30],
-      borderColor: Utils.CHART_COLORS.blue,
-      backgroundColor: Utils.CHART_COLORS.blue,
-    }
-  ]
-};
