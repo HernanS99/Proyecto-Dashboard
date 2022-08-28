@@ -1,294 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="shortcut icon" href="./assets/img/favico.ico.png" type="image/x-icon">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Weather</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="shortcut icon" href="./assets/img/favico.ico.png" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Weather</title>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand active" href="#"><strong>Weather</strong></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                     <a class="nav-link active" aria-current="page" href="#"><STRong>Inicio</STRong></a>
-                    </li>
-                    <li class="nav-item">
-                     <a class="nav-link active" href="#"><STRong>Clima</STRong></a>
-                    </li>
-                    <li class="nav-item">
-                     <a class="nav-link active" href="#"><STRong>Humedad</STRong></a>
-                    </li>
-                    <li class="nav-item">
-                     <a class="nav-link active" href="#"><STRong>Paises</STRong></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link active" href="#"><STRong>Ciudades</STRong></a>
-                    </li>
-                </ul>
-                    <img src="./assets/img/log.png" alt="">
-            </div>
-        </div>
-    </nav>
-    <!-- <div class="container" id="wrapper">
-        <div class="container-fluid" id="current-weather">
-          <div class="row">
-            
-            
-            <div class="col-md-4 col-sm-5">
-              <h5><spam id="cityName"></spam>, <spam id="cityCode"></spam></h5>
-              <h6 id="localDate"></h6>
-              <h5 id="localTime"></h5>
-              <a id="refreshButton" href="#"><i class="fa fa-refresh fa-fw" aria-hidden="true"></i> Refresh</a>
-            </div>
-            
-            
-            <div class="col-md-5 col-sm-7" style="margin: 10px auto;padding:0;">
-              <div class="row">
-                <i class="wi" id ="main-icon" style="font-size: 85px;"></i>
-                <div>
-                  <spam id="mainTemperature"></spam>
-                  <p id="tempDescription"></p>
-                </div>
-                <p style="font-size: 1.5rem;"><a href="#" class="active" id="celcius">°C</a> | <a href="#" id="farenheit">°F</a></p>
-              </div>
-            </div>
-            
-          
-            <div class="col-xs-12 col-sm-12 col-md-3 row" style="text-align: right;">
-              <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
-                <h6>Humedad: <spam id="humidity"></spam>%</h6>
-              </div>
-              <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
-                <h6>Vientos: <spam id="wind"></spam> m/s</h6>
-              </div>
-              <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
-                <h6>T°Max: <spam id="mainTempHot"></spam>°</h6>
-              </div>
-              <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
-                <h6>T°Min: <spam id="mainTempLow"></spam>°</h6>
-              </div>
-            </div>
-            
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand active" href="#"><strong>Weather</strong></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><STRong>Inicio</STRong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#"><STRong>Clima</STRong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#"><STRong>Humedad</STRong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#"><STRong>Paises</STRong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#"><STRong>Ciudades</STRong></a>
+          </li>
+        </ul>
+        <img src="./assets/img/log.png" alt="">
+      </div>
+    </div>
+  </nav>
+  <main>
+    <div class="container" id="wrapper">
+      <div class="container-fluid" id="current-weather">
+        <div class="row">
+
+
+          <div class="col-md-4 col-sm-5">
+            <h5>
+              <spam id="cityName"></spam>, <spam id="cityCode"></spam>
+            </h5>
+            <h6 id="localDate"></h6>
+            <h5 id="localTime"></h5>
+            <a id="refreshButton" href="#"><i class="fa fa-refresh fa-fw" aria-hidden="true"></i> Refresh</a>
           </div>
-        </div>
-        
-        
-        <div class="modal fade" id="protocol-modal" tabindex="-1" role="dialog">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+
+          <div class="col-md-5 col-sm-7" style="margin: 10px auto;padding:0;">
+            <div class="row">
+              <i class="wi" id="main-icon" style="font-size: 85px;"></i>
+              <div>
+                <spam id="mainTemperature"></spam>
+                <p id="tempDescription"></p>
               </div>
-              <div class="modal-body">
-                <p>Due to weather api restrictions, data can only be shown via HTTP request.</p>
-                <p>Sorry for the inconvenience.</p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
+              <p style="font-size: 1.5rem;"><a href="#" class="active" id="celcius">°C</a> | <a href="#"
+                  id="farenheit">°F</a></p>
             </div>
           </div>
+
+
+          <div class="col-xs-12 col-sm-12 col-md-3 row" style="text-align: right;">
+            <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
+              <h6>Humedad: <spam id="humidity"></spam>%</h6>
+            </div>
+            <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
+              <h6>Vientos: <spam id="wind"></spam> m/s</h6>
+            </div>
+            <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
+              <h6>T°Max: <spam id="mainTempHot"></spam>°</h6>
+            </div>
+            <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
+              <h6>T°Min: <spam id="mainTempLow"></spam>°</h6>
+            </div>
+          </div>
+
         </div>
-        
-       
-        <div class="container-fluid">
-          <div class="row" style="padding: 2px;">
-            
-          
-            <div class="col-md-3 col-sm-6 day-weather-box">
-              <div class="col-sm-12 day-weather-inner-box">
-                <div class="col-sm-8 forecast-main">
-                  <p id="forecast-day-1-name"></p>
-                  <div class="row">
-                    <h5 id="forecast-day-1-main">°</h5>
-                    <i class="wi forecast-icon" id="forecast-day-1-icon"></i>
-                  </div>
-                </div>
-                <div class="col-sm-4 forecast-min-low">
-                  <p><spam class="high-temperature" id="forecast-day-1-ht"></spam></p>
-                  <p><spam class="low-temperature" id="forecast-day-1-lt"></spam></p>
-                </div>
-              </div>
+      </div>
+      <div class="modal fade" id="protocol-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                  aria-hidden="true">&times;</span></button>
             </div>
-            
-            
-            <div class="col-md-3 col-sm-6 day-weather-box">
-              <div class="col-sm-12 day-weather-inner-box">
-                <div class="col-sm-8 forecast-main">
-                  <p id="forecast-day-2-name"></p>
-                  <div class="row">
-                    <h5 id="forecast-day-2-main">°</h5>
-                    <i class="wi forecast-icon" id="forecast-day-2-icon"></i>
-                  </div>
-                </div>
-                <div class="col-sm-4 forecast-min-low">
-                  <p><spam class="high-temperature" id="forecast-day-2-ht"></spam></p>
-                  <p><spam class="low-temperature" id="forecast-day-2-lt"></spam></p>
-                </div>
-              </div>
+            <div class="modal-body">
+              <p>Due to weather api restrictions, data can only be shown via HTTP request.</p>
+              <p>Sorry for the inconvenience.</p>
             </div>
-            
-          
-            <div class="col-md-3 col-sm-6 day-weather-box">
-              <div class="col-sm-12 day-weather-inner-box">
-                <div class="col-sm-8 forecast-main">
-                  <p id="forecast-day-3-name"></p>
-                  <div class="row">
-                    <h5 id="forecast-day-3-main">°</h5>
-                    <i class="wi forecast-icon" id="forecast-day-3-icon"></i>
-                  </div>
-                </div>
-                <div class="col-sm-4 forecast-min-low">
-                  <p><spam class="high-temperature" id="forecast-day-3-ht"></spam></p>
-                  <p><spam class="low-temperature" id="forecast-day-3-lt"></spam></p>
-                </div>
-              </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
-            
-           
-            <div class="col-md-3 col-sm-6 day-weather-box">
-              <div class="col-sm-12 day-weather-inner-box">
-                <div class="col-sm-8 forecast-main">
-                  <p id="forecast-day-4-name"></p>
-                  <div class="row">
-                    <h5 id="forecast-day-4-main">°</h5>
-                    <i class="wi forecast-icon" id="forecast-day-4-icon"></i>
-                  </div>
-                </div>
-                <div class="col-sm-4 forecast-min-low">
-                  <p><spam class="high-temperature" id="forecast-day-4-ht"></spam></p>
-                  <p><spam class="low-temperature" id="forecast-day-4-lt"></spam></p>
-                </div>
-              </div>
-            </div>
-            
           </div>
         </div>
       </div>
-    
-    <div class="container-fluid1 px-1 px-md-4 py-5 mx-auto;">
-        <div class="row d-flex justify-content-center px-3">
-            <div class="card">
-                <h2 class="ml-auto mr-4 mt-3 mb-0">Santiago</h2>
-                <p class="ml-auto mr-4 mb-0 med-font">Lluvia</p>
-                <h1 class="ml-auto mr-4 large-font">8&#176;</h1>
-                <p class="ml-4 mb-4 mb-0 ml-4 mt-auto">Húmedad:58.0 %</p>
-                <p class="ml-4 mb-4">Presión:1020 hPa</p>
-            </div>
-        </div>
-    </div> 
-    </a> --><!-- 
-    <div class="main container">
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4 weather-panel">
-              <div class="col-xs-6">
-                <h2>Santiago<br><small>May 24, 2016</small></h2>
-                <p class="h3"><i class="mi mi-fw mi-lg mi-rain-heavy"></i> Lluvia</p>
-              </div>
-              <div class="col-xs-6 text-center">
-                <div class="h1 temperature">
-                  <span>12°</span>
-                  <br>
-                  <small>7° / 13°</small>
+      <div class="container-fluid">
+        <div class="row" style="padding: 2px;">
+          <div class="col-md-3 col-sm-6 day-weather-box">
+            <div class="col-sm-12 day-weather-inner-box">
+              <div class="col-sm-8 forecast-main">
+                <p id="forecast-day-1-name"></p>
+                <div class="row">
+                  <h5 id="forecast-day-1-main">°</h5>
+                  <i class="wi forecast-icon" id="forecast-day-1-icon"></i>
                 </div>
               </div>
-              <div class="col-xs-12">
-                <ul class="list-inline row forecast">
-                  <li class="col-xs-4 col-sm-2 text-center">
-                    <h3 class="h5">Wed</h3>
-                    <p><i class="mi mi-fw mi-2x mi-cloud-sun"></i><br>9°/18°</p>
-                  </li>
-                  <li class="col-xs-4 col-sm-2 text-center">
-                    <h3 class="h5">Thu</h3>
-                    <p><i class="mi mi-fw mi-2x mi-sun"></i><br>12°/23°</p>
-                  </li>
-                  <li class="col-xs-4 col-sm-2 text-center">
-                    <h3 class="h5">Fri</h3>
-                    <p><i class="mi mi-fw mi-2x mi-cloud-sun"></i><br>14°/24°</p>
-                  </li>
-                  <li class="col-xs-4 col-sm-2 text-center">
-                    <h3 class="h5">Sat</h3>
-                    <p><i class="mi mi-fw mi-2x mi-rain"></i><br>15°/23°</p>
-                  </li>
-                  <li class="col-xs-4 col-sm-2 text-center">
-                    <h3 class="h5">Sun</h3>
-                    <p><i class="mi mi-fw mi-2x mi-rain-heavy"></i><br>13°/22°</p>
-                  </li>
-                  <li class="col-xs-4 col-sm-2 text-center">
-                    <h3 class="h5">Mon</h3>
-                    <p><i class="mi mi-fw mi-2x mi-clouds"></i><br>12°/20°</p>
-                  </li>
-                </ul>
+              <div class="col-sm-4 forecast-min-low">
+                <p>
+                  <spam class="high-temperature" id="forecast-day-1-ht"></spam>
+                </p>
+                <p>
+                  <spam class="low-temperature" id="forecast-day-1-lt"></spam>
+                </p>
               </div>
             </div>
           </div>
+          <div class="col-md-3 col-sm-6 day-weather-box">
+            <div class="col-sm-12 day-weather-inner-box">
+              <div class="col-sm-8 forecast-main">
+                <p id="forecast-day-2-name"></p>
+                <div class="row">
+                  <h5 id="forecast-day-2-main">°</h5>
+                  <i class="wi forecast-icon" id="forecast-day-2-icon"></i>
+                </div>
+              </div>
+              <div class="col-sm-4 forecast-min-low">
+                <p>
+                  <spam class="high-temperature" id="forecast-day-2-ht"></spam>
+                </p>
+                <p>
+                  <spam class="low-temperature" id="forecast-day-2-lt"></spam>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 day-weather-box">
+            <div class="col-sm-12 day-weather-inner-box">
+              <div class="col-sm-8 forecast-main">
+                <p id="forecast-day-3-name"></p>
+                <div class="row">
+                  <h5 id="forecast-day-3-main">°</h5>
+                  <i class="wi forecast-icon" id="forecast-day-3-icon"></i>
+                </div>
+              </div>
+              <div class="col-sm-4 forecast-min-low">
+                <p>
+                  <spam class="high-temperature" id="forecast-day-3-ht"></spam>
+                </p>
+                <p>
+                  <spam class="low-temperature" id="forecast-day-3-lt"></spam>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 day-weather-box">
+            <div class="col-sm-12 day-weather-inner-box">
+              <div class="col-sm-8 forecast-main">
+                <p id="forecast-day-4-name"></p>
+                <div class="row">
+                  <h5 id="forecast-day-4-main">°</h5>
+                  <i class="wi forecast-icon" id="forecast-day-4-icon"></i>
+                </div>
+              </div>
+              <div class="col-sm-4 forecast-min-low">
+                <p>
+                  <spam class="high-temperature" id="forecast-day-4-ht"></spam>
+                </p>
+                <p>
+                  <spam class="low-temperature" id="forecast-day-4-lt"></spam>
+                </p>
+              </div>
+            </div>
+          </div>
+
         </div>
-      </div><a style="font-size: 8pt; text-decoration: none" target="_blank" href="http://frontendfreecode.com">
-   -->
-    
-    <h1> Condiciones del Clima</h1>
+      </div>
+    </div>
+
     <div class="container mb-4 text-center">
-        <div class="row">
-            <div class="col-9">
-                    <legend> Pais </legend>
-                    <input type="text" class="form-control" id="textoBuscar" placeholder="Ingrese ciudad" />
-                    
-            </div>
-            <div class="col-3">
-              <select name="cant" id="cantidad">
-                <option value="8">8 horas</option>
-                <option value="16">16 horas</option>
-                <option value="24">24 horas</option>
-                <option value="32">32 horas</option>
-                <option value="40">40 horas</option>
-              </select>
-            </div>
+      <div class="row">
+        <div class="col-9">
+          <legend> Pais </legend>
+          <input type="text" class="form-control" id="textoBuscar" placeholder="Ingrese ciudad" />
+
         </div>
-        <div class="col-12 my-5">
-          <select name="tip" id="tipo">
-            <option value="metric">Celcius</option>
-            <option value="imperial">farenheit</option>
-            
+        <div class="col-3">
+          <select name="cant" id="cantidad">
+            <option value="8">8 horas</option>
+            <option value="16">16 horas</option>
+            <option value="24">24 horas</option>
+            <option value="32">32 horas</option>
+            <option value="40">40 horas</option>
           </select>
         </div>
-        <div class="row">
-          <div class="col-12">
-            <button type="button" class="btn btn-success my-5" id="buscar">Buscar </button>
-          </div>
+      </div>
+      <div class="col-12 my-5">
+        <select name="tip" id="tipo">
+          <option value="metric">Celcius</option>
+          <option value="imperial">farenheit</option>
+
+        </select>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <button type="button" class="btn btn-success my-5" id="buscar">Buscar </button>
         </div>
+      </div>
     </div>
     <div class="container-fluid">
-        <div>
-            <canvas id="myChart"></canvas>
-          </div>
-           <div>
-            <div id="openweathermap-widget-11"></div>
-           </div>
+      <div>
+        <canvas id="myChart"></canvas>
+      </div>
+      <div>
+        <div id="openweathermap-widget-11"></div>
+      </div>
     </div>
+  </main>
 
-    <footer class="bg-light text-center text-lg-start">
-       <div class="text-center p-3" style="background-color: rgba(249, 245, 245, 0.2);">
-          © 2022 Copyright:
-          <class="text-dark" href="">weather.com</a> <img class="imgf" src="./assets/img/log.png" alt="">
-        </div>
-    </footer>
-    <script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>
+  <footer class="bg-light text-center text-lg-start">
+    <div class="text-center p-3" style="background-color: rgba(249, 245, 245, 0.2);">
+      © 2022 Copyright:
+      <class="text-dark" href="">weather.com</a> <img class="imgf" src="./assets/img/log.png" alt="">
+    </div>
+  </footer>
+  <script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="./assets/js/main.js" type="module"></script>
-    <script src="./assets/js/getFromApi.js" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./assets/js/main.js" type="module"></script>
+  <script src="./assets/js/getFromApi.js"></script>
 </body>
+
 </html>
