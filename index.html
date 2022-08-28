@@ -189,29 +189,36 @@
       </div>
     </div>
 
-    <div class="container mb-4 text-center">
+    <div class="container text-center">
       <div class="row">
-        <div class="col-9">
-          <legend> Pais </legend>
+        <div class="col-7">
           <input type="text" class="form-control" id="textoBuscar" placeholder="Ingrese ciudad" />
 
         </div>
         <div class="col-3">
-          <select name="cant" id="cantidad">
-            <option value="8">8 horas</option>
-            <option value="16">16 horas</option>
-            <option value="24">24 horas</option>
-            <option value="32">32 horas</option>
-            <option value="40">40 horas</option>
-          </select>
+          <div class="input-group mb-2">
+            <label class="input-group-text" for="inputGroupSelect01">Horas</label>
+            <select class="form-select" id="cantidad">
+              <option value="8">8 horas</option>
+              <option value="16">16 horas</option>
+              <option value="24">24 horas</option>
+              <option value="32">32 horas</option>
+              <option value="40">40 horas</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="input-group mb-2">
+            <label class="input-group-text" for="inputGroupSelect01">Metrica</label>
+            <select class="form-select" id="tipo">
+              <option value="metric">Celcius</option>
+            <option value="imperial">farenheit</option>
+            </select>
+          </div>
         </div>
       </div>
       <div class="col-12 my-5">
-        <select name="tip" id="tipo">
-          <option value="metric">Celcius</option>
-          <option value="imperial">farenheit</option>
-
-        </select>
+       
       </div>
       <div class="row">
         <div class="col-12">
@@ -223,9 +230,7 @@
       <div>
         <canvas id="myChart"></canvas>
       </div>
-      <div>
-        <div id="openweathermap-widget-11"></div>
-      </div>
+      
     </div>
   </main>
 
