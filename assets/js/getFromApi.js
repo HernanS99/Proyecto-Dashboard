@@ -5,6 +5,7 @@ let myChart;
 let array = []
 let labelss = []
 let array2 = []
+document.getElementById("wrapper").style.display = "none"
 
 async function leerDatos() {
   let text = document.getElementById("textoBuscar").value;
@@ -24,13 +25,11 @@ async function leerDatos() {
 }
 
 function generarGrafico() {
-
+  document.getElementById("wrapper").style.display = ""
   array = response1.map(Element => Element.main.temp_max)
   array2 = response1.map(Element => Element.main.temp_min)
 
-  let id = response.city.id;
 
-  console.log(id)
     labelss = response1.map(Element => Element.dt_txt)
  
 
@@ -39,9 +38,7 @@ function generarGrafico() {
   const labels = [...labelss];
 
 
-  window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = []; window.myWidgetParam.push({ id: 11, cityid: id, appid: '8ea115a8875190c8af50ed4a8da786b9', units: 'metric', containerid: 'openweathermap-widget-11', }); (function () { var script = document.createElement('script'); script.async = true; script.charset = "utf-8"; script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js"; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s); })();
-
-
+  
 
 
   const data = {

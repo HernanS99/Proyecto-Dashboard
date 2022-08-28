@@ -39,7 +39,7 @@
             <a class="nav-link active" href="#"><STRong>Ciudades</STRong></a>
           </li>
         </ul>
-        <img src="./assets/img/log.png" alt="">
+        <!-- <img src="./assets/img/log.png" alt=""> -->
       </div>
     </div>
   </nav>
@@ -61,7 +61,7 @@
 
           <div class="col-md-5 col-sm-7" style="margin: 10px auto;padding:0;">
             <div class="row">
-              <i class="wi" id="main-icon" style="font-size: 85px;"></i>
+              <i class="wi" id="mai" style="font-size: 50px;"><img id="main-icon" src="" height="100px" ></i>
               <div>
                 <spam id="mainTemperature"></spam>
                 <p id="tempDescription"></p>
@@ -74,7 +74,7 @@
 
           <div class="col-xs-12 col-sm-12 col-md-3 row" style="text-align: right;">
             <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
-              <h6>Humedad: <spam id="humidity"></spam>%</h6>
+              <h6>Humedad: <spam id="humedad"></spam>%</h6>
             </div>
             <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
               <h6>Vientos: <spam id="wind"></spam> m/s</h6>
@@ -89,23 +89,7 @@
 
         </div>
       </div>
-      <div class="modal fade" id="protocol-modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                  aria-hidden="true">&times;</span></button>
-            </div>
-            <div class="modal-body">
-              <p>Due to weather api restrictions, data can only be shown via HTTP request.</p>
-              <p>Sorry for the inconvenience.</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
+     
       <div class="container-fluid">
         <div class="row" style="padding: 2px;">
           <div class="col-md-3 col-sm-6 day-weather-box">
@@ -189,11 +173,11 @@
       </div>
     </div>
 
-    <div class="container text-center">
+    <div class="container text-center mt-5">
       <div class="row">
         <div class="col-7">
           <input type="text" class="form-control" id="textoBuscar" placeholder="Ingrese ciudad" />
-
+ 
         </div>
         <div class="col-3">
           <div class="input-group mb-2">
@@ -236,7 +220,7 @@
   <footer class="bg-light text-center text-lg-start">
     <div class="text-center p-3" style="background-color: rgba(249, 245, 245, 0.2);">
       © 2022 Copyright:
-      <class="text-dark" href="">weather.com</a> <img class="imgf" src="./assets/img/log.png" alt="">
+      <class="text-dark" href="">weather.com</a> <!-- <img class="imgf" src="./assets/img/log.png" alt=""> -->
     </div>
   </footer>
   <script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>
@@ -248,6 +232,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="./assets/js/main.js" type="module"></script>
   <script src="./assets/js/getFromApi.js"></script>
+  <script src="./assets/js/getCurrenWheater.js"></script>
 </body>
 
 </html>

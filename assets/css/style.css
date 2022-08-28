@@ -28,10 +28,9 @@ body{
     margin: 0px 50px;
 }
 
-img{
-    height: 67px;
-    width: 75px;
-    
+.imgg{
+  width: 10px;
+  height: 10px;
 }
 
 
