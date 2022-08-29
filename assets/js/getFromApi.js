@@ -16,15 +16,19 @@ async function leerDatos() {
   let config = {
 
   }
-  response = await axios.get(url, config)
-  response = response.data
-  response1 = [...response.list]
-  
-  generarGrafico()
-  
+  try{
+    response = await axios.get(url, config)
+    response = response.data
+    response1 = [...response.list]
+    generarGrafico()
+  }catch(err){
+    
+  }
 }
 
 function generarGrafico() {
+
+  console.log(response)
   document.getElementById("wrapper").style.display = ""
   array = response1.map(Element => Element.main.temp_max)
   array2 = response1.map(Element => Element.main.temp_min)
