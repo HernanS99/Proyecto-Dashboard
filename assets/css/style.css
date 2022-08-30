@@ -38,7 +38,11 @@ body{
     width: 500px;
     margin: 0px 50px;
 }
+.init p{
+  color: #03090c;
+  font-size: larger;
 
+}
 .imgg{
   padding: 2px;
   width: 75px;
