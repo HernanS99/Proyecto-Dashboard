@@ -27,23 +27,12 @@ async function leerDatos() {
 }
 
 function generarGrafico() {
-
   console.log(response)
   document.getElementById("wrapper").style.display = ""
   array = response1.map(Element => Element.main.temp_max)
   array2 = response1.map(Element => Element.main.temp_min)
-
-
-    labelss = response1.map(Element => Element.dt_txt)
- 
-
-  
-
+  labelss = response1.map(Element => Element.dt_txt)
   const labels = [...labelss];
-
-
-  
-
 
   const data = {
     labels: labels,
@@ -64,12 +53,6 @@ function generarGrafico() {
             loop: true
           }
         },
-      },
-      {
-        label: 'Temperatura Minima',
-        data: [...array2],
-        backgroundColor: 'rgb(30,144,255)',
-        borderColor: 'rgb(30,144,255)',
       }
     ]
   };
