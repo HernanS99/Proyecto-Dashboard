@@ -1,27 +1,35 @@
 body{
 	font-family: 'Coming Soon', cursive;
-	background-color: #fabd30;
-    /* background-image: url("./assets/img/fond.jpg"); */
+	/*background-color: gray;*/
+    background-image: url("./assets/img/fond.jpg"); 
     background-repeat: no-repeat;
     background-size: 100%;
     width: 100%;
 	margin:0 auto;
 }
 
+
 .collapse{
 	display: flex;
 	justify-content: space-evenly;
-	color: rgb(12, 3, 3);
-    width: 100%;
-    height: 50px;
-    background-color: rgb(250, 248, 248);    
-    justify-content: first baseline;
-    padding-right: 10px;
-    margin-left: 220px;
+	color: white;
+  width: 100%;
+  height: 50px;
+  background-color: white;    
+  justify-content: first baseline;
+  padding-right: 10px;
+  margin-left: 220px;
+}
+#navi{
+  background-color: #03090c;
+  color: white;
 }
 
 #nvacolor{
 	background-color:rgb(244, 236, 236);
+}
+.nav-item{
+  color: #fff;
 }
 #ingreso{
     width: 500px;
@@ -29,14 +37,15 @@ body{
 }
 
 .imgg{
-  width: 10px;
-  height: 10px;
+  padding: 2px;
+  width: 75px;
+  height: 65px;
 }
 
 
 h1{
 	text-align:center;
-	color: aliceblue;
+	color: rgb(233, 238, 243);
 }
 	
 legend{
@@ -133,9 +142,9 @@ a {
 
   
   #wrapper {
-    background-color: #378bbc;
+    background-color: #03090c;
     box-shadow: 1px 5px 25px 3px #444;
-    border-radius: 10px;
+    border-radius: 30px;
     margin: 100px auto;
     max-width: 720px;
     padding: 0px;
