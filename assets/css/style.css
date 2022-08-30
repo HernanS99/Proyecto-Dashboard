@@ -1,35 +1,38 @@
 body{
 	font-family: 'Coming Soon', cursive;
-	/*background-color: gray;*/
-    background-image: url("./assets/img/fond.jpg"); 
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
+	background-color: rgb(8, 2, 2);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
 	margin:0 auto;
 }
+
+.navbar{
+  background: #03090c;
+}
+.index{
+  color: #03090c;
+}
+
 
 
 .collapse{
 	display: flex;
 	justify-content: space-evenly;
+  background-color: rgb(2, 0, 0); 
 	color: white;
   width: 100%;
-  height: 50px;
-  background-color: white;    
+  height: 50px;     
   justify-content: first baseline;
   padding-right: 10px;
   margin-left: 220px;
 }
-#navi{
-  background-color: #03090c;
-  color: white;
-}
 
-#nvacolor{
-	background-color:rgb(244, 236, 236);
-}
+
+
 .nav-item{
-  color: #fff;
+  background-color: white;
+  
 }
 #ingreso{
     width: 500px;
@@ -40,6 +43,14 @@ body{
   padding: 2px;
   width: 75px;
   height: 65px;
+}
+
+#buscar{
+ justify-content: center;
+}
+
+.title{
+  color: white;
 }
 
 
@@ -81,7 +92,10 @@ h3{
 }
 
 .btn {
-	align-content: center;
+  box-shadow: 1px 5px 25px 3px rgb(20, 7, 7);
+  border-radius: 30px;
+  background-color: #252829;
+	
 }
 tr{
 	color: white;
@@ -89,6 +103,11 @@ tr{
 footer{
     min-height: 100px;
     margin-top: 5%;
+}
+
+#foo{
+  display: flex;
+  justify-content: center;
 }
 .card {
     background-color: rgb(161, 221, 231);

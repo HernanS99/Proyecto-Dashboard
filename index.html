@@ -16,22 +16,15 @@
 <body>
   <nav class="navbar navbar-expand-lg bg-light" id="navi">
     <div class="container-fluid">
-      <a class="navbar-brand active" href="#"><strong>Weather</strong></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"><STRong>Inicio</STRong></a>
-          </li>
-        </ul>
-        <img class="imgg" src="./assets/img/log.png" alt="" >
-      </div>
+      <h1 class="index"><strong>Weather</strong></h1>
+      <img class="imgg" src="./assets/img/log.png" alt="" >    
     </div>
   </nav>
+  <br>
+  <br>  
   <main>
+
+    <h2 class="title"><center><strong>Condiciones Metereológicas</strong></center></h2>
     <div class="container" id="wrapper">
       <div class="container-fluid" id="current-weather">
         <div class="row">
@@ -78,11 +71,18 @@
       
     </div>
 
+
+
     <div class="container text-center mt-5">
       <div class="row">
-        <div class="col-xl-7 col-md-12 mt-2">
-          <input type="text" class="form-control" id="textoBuscar" placeholder="Ingrese ciudad" />
- 
+        
+        <div class="col-xl-7 col-md-12 mt-2" id="city">
+          <div>
+            
+            <div>              
+              <input type="text" class="form-control" id="textoBuscar" placeholder="Buscador por Ciudad" />
+            </div>
+          </div>     
         </div>
         <div class="col-xl-3 col-md-6 mt-2">
           <div class="input-group ">
@@ -106,10 +106,11 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12">
-          <button type="button" class="btn btn-success my-5" id="buscar">Buscar </button>
-        </div>
+     
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <button type="submit" class="btn btn-success my-5" id="buscar"> <center><strong>Buscar</strong></center> </button>
       </div>
     </div>
     <div class="container-fluid">
@@ -119,10 +120,13 @@
     </div>
   </main>
 
-  <footer class="bg-light text-center text-lg-start">
+  <footer class="bg-light text-center text-lg-start" id="foo">
     <div class="text-center p-3" style="background-color: rgba(249, 245, 245, 0.2);">
       © 2022 Copyright:
       <class="text-dark" href="">weather.com</a> <!-- <img class="imgf" src="./assets/img/log.png" alt=""> -->
+    </div>
+    <div>
+      <img class="imgg" src="./assets/img/log.png" alt="">
     </div>
   </footer>
   <script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>
