@@ -45,9 +45,7 @@ body{
   height: 65px;
 }
 
-#buscar{
- justify-content: center;
-}
+
 
 .title{
   color: white;
@@ -90,9 +88,14 @@ h3{
 .form{
 	width:20px;
 }
+.row{
+  text-align: center;
+  
+  
+}
 
 .btn {
-  box-shadow: 1px 5px 25px 3px rgb(20, 7, 7);
+  box-shadow: 1px 5px 25px 3px rgb(41, 38, 38);
   border-radius: 30px;
   background-color: #252829;
 	
