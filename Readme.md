@@ -1,4 +1,4 @@
-<h1>¡Hola ✌️, Bienvenido al repositorio de la APP del pronositco del tiempo! 🌎⛅✈️</h1> 
+<h1>¡Hola ✌️, Bienvenido al repositorio de la APP del pronositco del clima! 🌎⛅✈️</h1> 
 
 <h2>Introducción</h2>
 
@@ -31,8 +31,8 @@ En esta app encontrarás las siguientes funcionalidades ⚙️ :
 
 
 <ul>
-    <li> Herna Silva</li>
-    <li> Jose Luis Lucuime</li>
+    <li> Hernán Silva</li>
+    <li> Jose Luis Licuime</li>
     <li> Juan Pablo Lagos</li>
 <ul>
 
