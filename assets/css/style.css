@@ -141,7 +141,7 @@ a {
   }
   
   .day-weather-box {
-    border: 1px solid #28688C;
+    border: 1px solid #28688C; 
     background-color: #2E7FA1;
     border-radius: 5px;
     height: 5em;
