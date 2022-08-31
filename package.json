@@ -12,7 +12,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "chart.js": "^3.9.1"
   }
 }
 

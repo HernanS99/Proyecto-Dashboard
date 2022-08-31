@@ -13,11 +13,8 @@ async function leerDatos() {
   let tipo = document.getElementById("tipo").value;
   const url = `https://api.openweathermap.org/data/2.5/forecast?q=${text}&cnt=${num}&units=${tipo}&lang=es&appid=8ea115a8875190c8af50ed4a8da786b9`
 
-  let config = {
-
-  }
   try{
-    response = await axios.get(url, config)
+    response = await axios.get(url)
     response = response.data
     response1 = [...response.list]
     generarGrafico()

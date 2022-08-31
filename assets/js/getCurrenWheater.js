@@ -6,14 +6,12 @@ async function leerDatos() {
     let num = document.getElementById("cantidad").value;
     let tipo = document.getElementById("tipo").value;
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${text}&cnt=${num}&units=${tipo}&lang=es&appid=8ea115a8875190c8af50ed4a8da786b9`
-    let config = {}
 
     try {
-        responsee = await axios.get(url, config)
+        responsee = await axios.get(url)
         responsee = responsee.data
         print()
     } catch (err) {
-        
         Swal.fire({
             position: 'top-end',
             icon: 'error',
@@ -22,7 +20,6 @@ async function leerDatos() {
             timer: 1500
           })
     }
-   
 }
 
 function print() {
