@@ -12,6 +12,7 @@ async function leerDatos() {
         responsee = responsee.data
         print()
     } catch (err) {
+        console.log(err.response.status)
         Swal.fire({
             position: 'top-end',
             icon: 'error',
@@ -23,7 +24,7 @@ async function leerDatos() {
 }
 
 function print() {
-
+    console.log(responsee.weather[0].icon)
     let icon = `http://openweathermap.org/img/w/${responsee.weather[0].icon}.png`
     document.getElementById("humedad").innerHTML = responsee.main.humidity;
     document.getElementById("wind").innerHTML = responsee.wind.speed;

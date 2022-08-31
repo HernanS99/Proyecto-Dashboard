@@ -14,15 +14,9 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg bg-light mb-2" id="navi">
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg bg-light mb-5" id="navi">
+    <div class="container">
       <h1 class="index"><strong>Weather</strong></h1>
-      <div>
-        <a class="init" href="">
-          <p><strong>Inicio</strong></p>
-        </a>
-      </div>
-
       <img class="imgg" src="./assets/img/log.png" alt="">
     </div>
   </nav>
@@ -38,29 +32,27 @@
               <spam id="cityName"></spam>, <spam id="cityCode"></spam>
             </h5>
             <h6 id="localDate"></h6>
-            <a id="refreshButton" href="#"><i class="fa fa-refresh fa-fw" aria-hidden="true"></i> Refresh</a>
           </div>
           <div class="col-md-5 col-sm-7">
             <div class="row">
-              <i class="wi" id="mai" style="font-size: 30px;"><img id="main-icon" src="" height="40px"></i>
+              <i class="wi" id="mai" style="font-size: 30px;"><img id="main-icon" src="" height="40px" alt=""></i>
               <div>
                 <spam id="mainTemperature"></spam>
                 <p id="tempDescription"></p>
               </div>
             </div>
           </div>
-
-          <div class="col-xs-12 col-sm-12 col-md-3 row" style="text-align: right;">
-            <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
+          <div class="col-12 row" style="text-align: right;">
+            <div class="col-12 col-md-3  side-weather-info">
               <h6>Humedad: <spam id="humedad"></spam>%</h6>
             </div>
-            <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
+            <div class="col-12 col-md-3  side-weather-info">
               <h6>Vientos: <spam id="wind"></spam> m/s</h6>
             </div>
-            <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
+            <div class="col-12 col-md-3  side-weather-info">
               <h6>T°Max: <spam id="mainTempHot"></spam>°</h6>
             </div>
-            <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
+            <div class="col-12 col-md-3  side-weather-info">
               <h6>T°Min: <spam id="mainTempLow"></spam>°</h6>
             </div>
           </div>
@@ -96,7 +88,7 @@
             <label class="input-group-text" for="inputGroupSelect01">Metrica</label>
             <select class="form-select" id="tipo">
               <option value="metric">Celcius</option>
-              <option value="imperial">farenheit</option>
+              <option value="imperial">Farenheit</option>
             </select>
           </div>
         </div>
