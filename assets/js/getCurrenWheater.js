@@ -1,7 +1,6 @@
-document.querySelector("#buscar").addEventListener("click", leerDatos)
 let responsee = []
 
-async function leerDatos() {
+async function leerDatosCurrent() {
     let text = document.getElementById("textoBuscar").value;
     let num = document.getElementById("cantidad").value;
     let tipo = document.getElementById("tipo").value;
@@ -10,9 +9,7 @@ async function leerDatos() {
     try {
         responsee = await axios.get(url)
         responsee = responsee.data
-        print()
     } catch (err) {
-        console.log(err.response.status)
         Swal.fire({
             position: 'top-end',
             icon: 'error',
@@ -21,20 +18,9 @@ async function leerDatos() {
             timer: 1500
           })
     }
+    return responsee
 }
 
-function print() {
-    console.log(responsee.weather[0].icon)
-    let icon = `http://openweathermap.org/img/w/${responsee.weather[0].icon}.png`
-    document.getElementById("humedad").innerHTML = responsee.main.humidity;
-    document.getElementById("wind").innerHTML = responsee.wind.speed;
-    document.getElementById("mainTempHot").innerHTML = responsee.main.temp_max;
-    document.getElementById("mainTempLow").innerHTML = responsee.main.temp_min;
-    document.getElementById("mainTemperature").innerHTML = `${responsee.main.feels_like}°`;
-    document.getElementById("tempDescription").innerHTML = responsee.weather[0].description;
-    document.getElementById("cityName").innerHTML = responsee.name;
-    document.getElementById("cityCode").innerHTML = responsee.sys.id;
-    document.getElementById("localDate").innerHTML = new Date(responsee.dt * 1000 - (responsee.timezone * 1000));
-    document.getElementById("main-icon").setAttribute("src", icon);
 
-}
+
+export default leerDatosCurrent;
