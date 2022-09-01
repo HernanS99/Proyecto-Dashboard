@@ -214,8 +214,6 @@ async function graphHumedity() {
     myChart.destroy();
   }
   myChart2 = new Chart(document.getElementById('myChart2'), config);
-
-
 }
 
 async function tarjeta() {

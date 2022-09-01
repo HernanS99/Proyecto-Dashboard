@@ -14,7 +14,7 @@ En esta app encontrarás las siguientes funcionalidades ⚙️ :
 
 <h2>Guía de funcionamiento</h2>
 
-1. Ingresar al siguiente link:
+1. Ingresar al siguiente link de github pages: https://hernans99.github.io/Proyecto-Dashboard/
 2. Escribir en el input la ciudad en la que te encuentres actualmente o cualquier otra que se te ocurra, ⚠️ **asegurate de digitar bien el nombre de la ciudad, de lo contrario la APP te indicara un error**⚠️.
 3. Disfruta del contenido que te entrega la APP 📱.
 
