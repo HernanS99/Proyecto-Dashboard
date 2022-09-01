@@ -11,7 +11,7 @@ document.querySelector("#buscar").addEventListener("click", print)
 
 document.getElementById("wrapper").style.display = "none"
 
-function print (){
+function print() {
   graphForecast()
   graphWinds()
   graphHumedity()
@@ -19,13 +19,13 @@ function print (){
 }
 
 async function graphForecast() {
-  
+
   let resul = await leerDatos()
   let response = [...resul]
   document.getElementById("wrapper").style.display = ""
   array = response.map(Element => Element.main.temp_max)
   array2 = response.map(Element => Element.main.temp_min)
-  labelss = response.map(Element => Element.dt_txt) 
+  labelss = response.map(Element => Element.dt_txt)
   const labels = [...labelss];
 
   const data = {
@@ -45,19 +45,20 @@ async function graphForecast() {
     type: 'line',
     data: data,
     options: {
-        plugins: {
-            legend: {
-                labels: {
-                    font: {
-                        size: 14
-                    }
-                }
+      plugins: {
+        legend: {
+          labels: {
+            font: {
+              size: 14
             }
-        },
+          }
+        }
+      },
       scales: {
         y: {
           beginAtZero: true,
           ticks: {
+            fontColor: "white",
             callback: function (value) {
               return value + '°'
             }
@@ -72,11 +73,11 @@ async function graphForecast() {
       }
     }
   };
-  if(myChart != undefined){
+  if (myChart != undefined) {
     myChart.destroy();
   }
   myChart = new Chart(document.getElementById('myChart'), config);
-  
+
 }
 
 async function graphWinds() {
@@ -116,13 +117,13 @@ async function graphWinds() {
     options: {
       plugins: {
         legend: {
-            labels: {
-                font: {
-                    size: 14
-                }
+          labels: {
+            font: {
+              size: 14
             }
+          }
         }
-    },
+      },
       scales: {
         y: {
           beginAtZero: true,
@@ -141,7 +142,7 @@ async function graphWinds() {
       }
     }
   };
-  if(myChart1 != undefined){
+  if (myChart1 != undefined) {
     myChart.destroy();
   }
   myChart1 = new Chart(document.getElementById('myChart1'), config);
@@ -184,13 +185,13 @@ async function graphHumedity() {
     options: {
       plugins: {
         legend: {
-            labels: {
-                font: {
-                    size: 14
-                }
+          labels: {
+            font: {
+              size: 14
             }
+          }
         }
-    },
+      },
       scales: {
         y: {
           beginAtZero: false,
@@ -206,15 +207,15 @@ async function graphHumedity() {
             minRotation: 90
           }
         },
-      }
+      },
     }
   };
-  if(myChart2 != undefined){
+  if (myChart2 != undefined) {
     myChart.destroy();
   }
   myChart2 = new Chart(document.getElementById('myChart2'), config);
-  
-  
+
+
 }
 
 async function tarjeta() {
@@ -233,3 +234,4 @@ async function tarjeta() {
   document.getElementById("main-icon").setAttribute("src", icon);
 
 }
+
