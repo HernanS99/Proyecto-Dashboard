@@ -36,17 +36,7 @@ async function graphForecast() {
         data: [...array],
         backgroundColor: 'rgb(255, 99, 132)',
         borderColor: 'rgb(255, 99, 132)',
-        borderCapStyle: 'butt',
-        borderDash: [5, 5],
-        animations: {
-          tension: {
-            duration: 1000,
-            easing: 'linear',
-            from: 1,
-            to: 0,
-            loop: true
-          }
-        },
+        borderWidth: 1,
       }
     ]
   };
@@ -55,6 +45,15 @@ async function graphForecast() {
     type: 'line',
     data: data,
     options: {
+        plugins: {
+            legend: {
+                labels: {
+                    font: {
+                        size: 14
+                    }
+                }
+            }
+        },
       scales: {
         y: {
           beginAtZero: true,
@@ -94,13 +93,13 @@ async function graphWinds() {
       {
         label: 'Velocidad del viento',
         data: [...wind],
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgb(255, 255, 255)',
+        borderColor: 'rgb(255, 255, 255)',
         borderCapStyle: 'butt',
         borderDash: [5, 5],
         animations: {
           tension: {
-            duration: 1000,
+            duration: 3000,
             easing: 'linear',
             from: 1,
             to: 0,
@@ -115,12 +114,21 @@ async function graphWinds() {
     type: 'line',
     data: data,
     options: {
+      plugins: {
+        legend: {
+            labels: {
+                font: {
+                    size: 14
+                }
+            }
+        }
+    },
       scales: {
         y: {
           beginAtZero: true,
           ticks: {
             callback: function (value) {
-              return value + '°'
+              return value + 'm/s'
             }
           }
         },
@@ -152,10 +160,11 @@ async function graphHumedity() {
       {
         label: 'Humedad',
         data: [...humedity],
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
-        borderCapStyle: 'butt',
-        borderDash: [5, 5],
+        backgroundColor: 'rgb(0, 0, 255)',
+        borderColor: 'rgb(0, 0, 255)',
+        pointBackgroundColor: '#fff',
+        borderJoinStyle: 'miter',
+        pointHoverBorderColor: '#fff',
         animations: {
           tension: {
             duration: 1000,
@@ -173,12 +182,21 @@ async function graphHumedity() {
     type: 'line',
     data: data,
     options: {
+      plugins: {
+        legend: {
+            labels: {
+                font: {
+                    size: 14
+                }
+            }
+        }
+    },
       scales: {
         y: {
-          beginAtZero: true,
+          beginAtZero: false,
           ticks: {
             callback: function (value) {
-              return value + '°'
+              return value + '%'
             }
           }
         },

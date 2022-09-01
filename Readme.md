@@ -1,4 +1,4 @@
-<h1>¡Hola ✌️, Bienvenido al repositorio de la APP del pronositco del clima! 🌎⛅✈️</h1> 
+<h1>¡Hola ✌️, Bienvenido al repositorio de la APP del pronóstico del clima! 🌎⛅✈️</h1> 
 
 <h2>Introducción</h2>
 
