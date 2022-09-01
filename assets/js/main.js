@@ -143,7 +143,7 @@ async function graphWinds() {
     }
   };
   if (myChart1 != undefined) {
-    myChart.destroy();
+    myChart1.destroy();
   }
   myChart1 = new Chart(document.getElementById('myChart1'), config);
 }
@@ -211,7 +211,7 @@ async function graphHumedity() {
     }
   };
   if (myChart2 != undefined) {
-    myChart.destroy();
+    myChart2.destroy();
   }
   myChart2 = new Chart(document.getElementById('myChart2'), config);
 }
